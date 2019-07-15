@@ -1,0 +1,55 @@
+<title>Teams</title>
+<style type="text/css">* {font-family:arial, sans-serif;}</style>
+<h1>Teams:</h1>
+<span><%= message %></span>
+<ul>
+    <% for (var i = 0; i < combinations.length; i++) { %>
+        <% var combination = combinations[i] %>
+        <h3>Teams <%= i %>:</h3>
+        <% var teams = combination[0] %>
+        <% var meanLevels = combination[1] %>
+        <% var sumLevels = combination[2] %>
+        <% var sumDistanceToMean = combination[3] %>
+        <% var sumDistanceToMeanDividedByN = combination[4] %>
+        <% var standardDeviation = combination[5] %>
+        <span>Sum of team levels: <%= meanLevels %></span>
+        </br>
+        <span>Mean μ of team levels: <%= sumLevels %></span>
+        </br>
+        <span>Sum of distance from the mean squared ∑∣x−μ∣^2: <%= sumDistanceToMean %></span>
+        </br>
+        <span>Divided by number of data points: <%= sumDistanceToMeanDividedByN %></span>
+        </br>
+        <span>Standard deviation: <%= standardDeviation %></span>
+        </br>
+        </br>
+        <% for (var j = 0; j < teams.length; j++) { %>
+            <% var team = teams[j] %>
+            <li>
+                <div>
+                    <span>
+                    	<%= team[0] %> & <%= team[1] %>
+                    </span>
+                    <br/>
+                    <span>
+                        Level1: <%= team[2] %>
+                    </span>
+                    <br/>
+                    <span>
+                        Level2: <%= team[3] %>
+                    </span>
+                    <br/>
+                    <span>
+                        Team level: <%= team[4] %>
+                    </span>
+                    <br/>
+                    <span>
+                        Distance from the mean squared ∣x−μ∣^2: <%= team[5] %>
+                    </span>
+                </div>
+                <br/>
+            </li>
+        <% } %>
+    </br>
+    <% } %>
+</ul>

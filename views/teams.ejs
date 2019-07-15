@@ -1,0 +1,11 @@
+
+<% for (var i = 0; i < teamCombinations.length; i++) { %>
+    <% var combination = combinations[i] %>
+    <h3>Teams <%= i %>:</h3>
+    <% for (var j = 0; j < teams.length; j++) { %>
+        <% var team = teams[j] %>
+        <%= team[0] %> & <%= team[1] %>;<%= team[2] %>;<%= team[3] %>;<%= team[4] %>
+        <br/>
+    <% } %>
+</br>
+<% } %> 

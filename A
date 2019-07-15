@@ -1,0 +1,52 @@
+A
+B
+C
+D
+E
+F
+
+----
+
+AB (1)
+AC (2)
+AD (3)
+AE (4)
+AF (5)
+
+BA (-)
+BC (3) (4) (5)
+BD (2)
+BE
+BF
+
+CA (-)
+CB 
+CD (1)
+CE 
+CF
+
+DA (-)
+DB 
+DC 
+DE (5)
+DF (4)
+
+EA (-)
+EB 
+EC
+ED 
+EF (1) (2) (3)
+
+FA (-)
+FB
+FC
+FD
+FE 
+
+----
+
+AB - CD - EF
+AC - BD - EF
+AD - BC - EF
+AE - BC - DF
+AF - BC - DE

@@ -1,0 +1,13 @@
+<title>Teams</title>
+<style type="text/css">* {font-family:arial, sans-serif;}</style>
+<h1>Best combination:</h1>
+<span><%= message %></span>
+<ul>
+<%=  %>
+    <% for (var j = 0; j < bestCombination.team.length; j++) { %>
+        <% var team = bestCombination.team[j] %>
+        <li>
+        	<%= team.player1 %> & <%= team.player2 %> (<%= team.level %>)
+        </li>
+    <% } %>
+</ul> 

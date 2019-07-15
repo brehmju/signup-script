@@ -1,0 +1,121 @@
+<title>Signup</title>
+<style type="text/css">
+    *{
+    font-family:arial, sans-serif;
+    }
+    .clear {
+        clear: both;
+    }
+    .center {
+        margin: auto;
+        width: 50%;
+    }
+    #wrapper {
+        width: 940px;
+        padding: 0px;
+    }
+    #left {
+        float: left;
+        margin-left: 10px;
+    }
+    #right {
+        float: left;
+        border: 3px solid #7885bf;
+    }
+    #logo {
+        content:url("logo.png");
+        width: 663px;
+    }
+    #message {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    }
+    #form {
+    margin-left: 10px;
+    float: left;
+    }
+    .label {
+    float: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #5b68a7;
+    font-size: 20px;
+    }
+    .levelDesc {
+    float: left;
+    }
+    .input {
+    float: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 10px;
+    }
+    #skillLevel {
+        width: 455px;
+    }
+    #sumbitButton {
+    float: right;
+    font-size: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    }
+    .beam {
+        float:left;
+        height: 15px;
+        background-color: #7885bf;
+        margin-bottom: 10px;
+    }
+    .beamRight {
+        float:left;
+        background-color: #d1d1d1;
+        height: 15px;
+    }
+    #text {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    </style>
+<div id="wrapper" class="center">
+    <div id="right">
+        <div id="logo"></div>
+        <div class="clear"></div>
+        <span id="message"><%= message %></span>
+        <div class="clear"></div>
+    	<form id="form" method="GET">
+    		<div id="form">
+    			<span class="label">Your name:</span>
+                <div class="clear"></div>
+    			<input class="input" type="text" name="name">
+                <div class="clear"></div>
+    			<span class="label">Your skill level:</span>
+                <div class="clear"></div>
+    			<span class="levelDesc">BEGINNER</span>
+                <input class="input" id="skillLevel" type="range" min="1" max="100" value="50" name="level">
+                <input name="sort" value="<%= sort %>" style="display:none;">
+                <span class="levelDesc">EXPERT</span>
+                <div class="clear"></div>
+    			<input id="sumbitButton" type="submit" value="Sign up!">
+    		</div>
+        </form>
+    </div>
+    <div id="left">
+        <div id="text">Participants:</div>
+        <div class="clear"></div>
+        <% for (var i = 0; i < user.length; i++) { %>
+            <span style="font-weight: bold;float:left;"><%= user[i].name %></span>
+            <div class="clear"></div>
+            <div class="beam" style="width:<%= user[i].level*2 %>px"> </div>
+            <div class="beamRight" style="width:<%= 200-user[i].level*2 %>px">
+            </div>
+            <div class="clear"></div>
+        <% } %>
+    </div>
+    <div class="clear"></div>
+</div>

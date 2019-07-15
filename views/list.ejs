@@ -1,0 +1,23 @@
+<title>Manage</title>
+<style type="text/css">* {font-family:arial, sans-serif;}</style>
+<h1>Manage participants:</h1>
+<span><%= message %></span>
+<ul>
+    <% for (var i = 0; i < user.length; i++) { %>
+    <li>
+        <div>
+            <span>
+            	<%= user[i].name %>
+            </span>
+            <span>
+            	<%= user[i].level %>
+            </span>
+            <span>
+            	<a href="/delete?name=<%= user[i].name %>">
+            		[delete]
+            	</a>
+            </span>
+        </div>
+    </li>
+    <% } %>
+</ul>
